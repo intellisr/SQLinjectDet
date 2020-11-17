@@ -1,0 +1,23 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/home.css') }}">
+    <script src="{{ url_for('static', filename = 'js/jquery-1.11.2.min.js') }}"></script> 
+    </head>
+    
+  <body style="background-image:url({{ url_for('static', filename = 'bg.jpg') }});background-size:cover;">
+    <form action ="http://localhost:5000/check" method = "post" name="form">  
+        <div class="insidediv">
+            <div class="col_fw">
+
+            <h1><b>Welcome to SQL Injection Detector</b></h1><br>
+            <I><h3 class="mb-4">Type Qurey to check:</h3></I><br>
+            <input type="text" id="query" name="query">
+            </br>
+            <h3 style="color: crimson;" class="mb-4">{{result}}<h3> 
+          </div>       
+        </div>
+    </form>    
+</html>
+
+
+
